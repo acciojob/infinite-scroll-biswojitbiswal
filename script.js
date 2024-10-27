@@ -1,7 +1,7 @@
 //your code here!
 let infiList = document.getElementById("infi-list");
 
-functin addListItem(count){
+function addListItem(count){
 	for(let i = 0; i < count; i++){
 		let list = document.createElement("li");
 		list.textContent = `Item ${infiList.children.length + 1}`;
