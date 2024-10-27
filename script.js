@@ -1,18 +1,18 @@
 //your code here!
-let infiList = document.getElementById("infi-list");
+const infiList = document.getElementById("infi-list");
 
-function addListItem(count){
-	for(let i = 0; i < count; i++){
-		let list = document.createElement("li");
-		list.textContent = `Item ${infiList.children.length + 1}`;
-		infiList.appendChild(list);
-	}
+function addListItems(count) {
+  for (let i = 0; i < count; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = `List Item ${infiList.children.length + 1}`;
+    infiList.appendChild(listItem);
+  }
 }
 
-addListItem(10);
+addListItems(10);
 
 infiList.addEventListener("scroll", () => {
-	if(infiList.scrollTop + infiList.clientHeight >= infiList.scrollHeight){
-		addListItem(2);
+	if (infiList.scrollTop + infiList.clientHeight >= infiList.scrollHeight) {
+		addListItems(2);
 	}
 })
